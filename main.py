@@ -115,6 +115,7 @@ def model(pipeline, parameters, X_train, y_train, X, y):
     plt.plot([xmin, xmax], [ymin, ymax], "g--", lw=1, alpha=0.4)
     plt.xlabel("Rzeczywiste ceny")
     plt.ylabel("Przewidywane ceny")
+    plt.ticklabel_format(style='plain', axis='both')
     plt.annotate(' R-squared CV = {}'.format(round(float(cv_scores.mean()), 3)), size=9,
              xy=(xmin,ymax), xytext=(10, -15), textcoords='offset points')
     plt.annotate(grid_obj.best_params_, size=9,
